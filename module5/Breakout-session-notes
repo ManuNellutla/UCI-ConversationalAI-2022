@@ -1,0 +1,43 @@
+ Movie-by-genre-by-language
+Similar-movies-in-multiple-languages  (if yoru genre, sentiment, ratin)
+movies-remade-in-other-languages
+movies-made-from-regions-or-country
+
+
+
+  Utterance : Show me godfather move made in different languages
+
+  SLOTS: @language @intent
+  Variables : Intent , language=any
+
+
+Intent : movies-remade-in-other-languages
+Entites : Movie, region, language, remake
+
+
+Webhook
+
+   Function (Movie, region, language, remake)
+   Return List of [movie name, language, year made, details]
+
+
+   Godfather is made in 6 languages
+
+     1,
+     2,
+     3,
+     4,
+
+
+
+  Function:
+
+    main(dict):
+
+    intent = dict.intent
+    language = dict.language
+
+     World_movie_data = (....../add language/ s)
+
+     matching 
+       - similar (match if - sentiment/genre/rating/any content match)
